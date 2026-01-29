@@ -17,7 +17,7 @@ app = FastAPI(title="SubTrack Sentinel API")
 # (CORS FIX)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React app
+    allow_origins=["https://sub-track-sentinel.vercel.app/"],  # React app
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -31,3 +31,4 @@ app.include_router(admin.router)
 @app.get("/")
 def root():
     return {"status": "Backend running successfully"}
+
