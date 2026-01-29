@@ -79,7 +79,7 @@ def forgot_password(data: dict):
     )
 
     # DEV MODE ONLY
-    print(f"RESET LINK: http://localhost:5173/reset-password?token={token}")
+    print(f"RESET LINK: https://sub-track-sentinel.vercel.app/reset-password?token={token}")
 
     return {"message": "Reset link sent"}
 
@@ -113,5 +113,6 @@ def trigger_alerts():
     from app.services.alerts import run_alerts
     run_alerts()
     return {"status": "Alerts executed"}
+
 
 
